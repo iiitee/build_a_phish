@@ -21,6 +21,7 @@
       DB_FILE_PATH: "/data/gophish.db"
     volumes:
       - "{{ gophish_dir }}/data:/data"
+      - "{{ gophish_dir }}/endpoint:/opt/gophish/static/endpoint"
       - "/etc/localtime:/etc/localtime:ro"
     networks:
       - name: "{{ dockernet }}"
